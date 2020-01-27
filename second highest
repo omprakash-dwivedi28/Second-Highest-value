@@ -1,0 +1,2 @@
+select max(designation_cd),unit_cd from employee 
+where designation_cd not in(select max(designation_cd) from employee) group by unit_cd
